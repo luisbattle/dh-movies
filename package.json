@@ -2,6 +2,7 @@
   "name": "dh-movies",
   "version": "1.0.0",
   "main": "index.js",
+  "github": "https://github.com/luisbattle/dh-movies/blob/master/README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
