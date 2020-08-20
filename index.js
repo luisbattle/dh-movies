@@ -261,7 +261,7 @@ http
         for (i = 0; i < movies.length; i++) {
           listado =
             listado +
-            `<br><lu>${movies[i]["title"]} <li>${movies[i]["overview"]}</li></lu>`;
+            `<br><h3>${movies[i]["title"]}</h3><p>${movies[i]["overview"]}<p>`;
         }
         //console.log(listado);
 
@@ -314,9 +314,9 @@ http
         break;
       case "/contacto":
         res.end(`<h1>Contáctanos</h1>
-        </br> <p> ¿Tenés algo para contarnos? Nos encanta escuchar a nuestros
+        <p> ¿Tenés algo para contarnos? Nos encanta escuchar a nuestros
         clientes. Si deseas contactarnos podés escribirnos al siguiente email:
-        dhmovies@digitalhouse.com o en las redes sociales. Envianos tu consulta,
+        <b>dhmovies@digitalhouse.com</b> o en las redes sociales. Envianos tu consulta,
         sugerencia o reclamo y será respondido a la brevedad posible. Recordá que
         también podes consultar la sección de Preguntas Frecuentes para obtener
         respuestas inmediatas a los problemas más comunes</p>`);
