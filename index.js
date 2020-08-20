@@ -313,10 +313,28 @@ http
         `);
         break;
       case "/contacto":
-        res.end("Contacto");
+        res.end(`<h1>Contáctanos</h1>
+        </br> <p> ¿Tenés algo para contarnos? Nos encanta escuchar a nuestros
+        clientes. Si deseas contactarnos podés escribirnos al siguiente email:
+        dhmovies@digitalhouse.com o en las redes sociales. Envianos tu consulta,
+        sugerencia o reclamo y será respondido a la brevedad posible. Recordá que
+        también podes consultar la sección de Preguntas Frecuentes para obtener
+        respuestas inmediatas a los problemas más comunes</p>`);
         break;
       case "/preguntas-frecuentes":
-        res.end("Preguntas Frecuentes");
+        var listado = "";
+        for (i = 0; i < faqs.length; i++) {
+          listado =
+            listado +
+            `<li>${faqs[i]["faq_title"]}</li>
+            <b>${faqs[i]["faq_answer"]}</b>
+            </br> <p> </p>              `; // para dejar un espaciado, meti un <p> vacío
+        }
+        res.end(`<h1>Preguntas Frecuentes</h1>
+        </br> Total de preguntas: ${faqs.length}
+        </br>
+        </br><h3>Listado de preguntas:</h3> ${listado}
+        `);
         break;
       default:
         res.end("404 not found");
