@@ -1,12 +1,39 @@
-const enCartelera = require("./enCartelera");
-const contacto = require("./contacto");
-const homePage = require("./homePage");
-const masVotadas = require("./masVotadas");
-const preguntasFrecuentes = require("./preguntasFrecuentes");
-const sucursales = require("./sucursales");
+const homeSection = require("./homePage");
+const masVotadasSection = require("./masVotadas");
+const enCarteleraSection = require("./enCartelera");
+const contactoSection = require("./contacto");
+const preguntasFrecuentesSection = require("./preguntasFrecuentes");
+const sucursalesSection = require("./sucursales");
 
-function home() {
-  return homePage.home();
+function getHome() {
+  return homeSection.home();
 }
 
-module.exports = { home };
+function getMasVotadas() {
+  return masVotadasSection.masVotadas();
+}
+
+function getEnCartelera() {
+  return enCarteleraSection.enCartelera();
+}
+
+function getContacto() {
+  return contactoSection.contacto();
+}
+
+function getPreguntasFrecuentes() {
+  return preguntasFrecuentesSection.preguntasFrecuentes();
+}
+
+function getSucursales() {
+  return sucursalesSection.sucursales();
+}
+
+module.exports = {
+  getHome,
+  getMasVotadas,
+  getEnCartelera,
+  getContacto,
+  getPreguntasFrecuentes,
+  getSucursales,
+};
